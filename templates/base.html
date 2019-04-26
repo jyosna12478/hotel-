@@ -1,0 +1,20 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head >
+	<link rel="stylesheet" href = "{% static 'django_Assigment_Project/styles.css' %}"
+  <meta charset="utf-8">
+  <title>{% block title %}Django Assignment  project{% endblock %}</title>
+</head>
+<body background="{% static 'django_Assigment_Project/h1.jpg' %}"  width="100%" class="img">
+  <main>
+  	<div class="center">
+    {% block content %}
+    {% endblock %}
+	</div>
+  </main>
+</body>
+</html>
+

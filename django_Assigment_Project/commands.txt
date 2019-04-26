@@ -1,0 +1,26 @@
+instruction manual 
+
+1)install pipenv 
+	pip install --user pipenv
+2) install Django
+	pipenv install Django
+3) import django 
+	>>import Django
+	>>print(django.get_version())
+5) creating virtual environment
+	virtualenv venv
+	cd venv
+	./scripts/activate
+	cd..
+
+4)start server by executing manage.py
+	>python manage.py runserver
+
+5)create a super user by using 
+	>python manage.py createsuperuser
+
+
+demo logins 
+
+fish2019
+pakku123

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Family Hotels|Book Now</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+
+
+		.mySlides {display:none;}
+		body{
+			background-color: black;
+		}
+		.img{
+    		opacity: 0.8;
+    		filter: alpha(opacity=10);
+    		position: absolute;
+    		height: 100%;
+		}
+		
+		.logo{
+			position:absolute;
+			display: block;
+			margin-left: 15px;
+		}
+		.menu{
+			background-color: none;
+    		float: right;
+    		position: absolute;
+    		width: 100%;
+    		margin-right: 50px;
+    		margin-left: 0px;
+    		padding-top: 28px;
+    	}
+		.menu button{
+			float:right;
+   		 	display:block;
+    		color:black;
+    		text-align: center;
+    		padding-top:8px; 
+    		text-decoration: none;
+    		font-size: 15px;
+    		padding-bottom: 8px;
+    		width: 200px;
+    		background-color: #C0C0C0;
+    		margin-right: 30px;
+		}
+		.topnav {
+    		background-color: none;
+    		float: right;
+    		position: relative;
+    		width: 100%;
+    		padding-right: 0px;
+    		margin-left: 0px;
+    	}
+		.topnav a {
+    		float:right;
+   		 	display:block;
+    		color: #f2f2f2;
+    		text-align: center;
+    		padding: 14px 8px;
+    		text-decoration: none;
+    		font-size: 15px;
+    		padding-bottom: 8px;
+    	}
+		.active:hover {
+    		border-bottom: 2px solid white;
+		}
+		#cpg{
+			font-size: 35px;
+			padding-top: 0px;
+			width: 50px;
+			padding-right: 0px;
+			height: 25px;
+		}
+		hr{
+			width: 1100px;
+			float: right;
+			margin-top: 0px;
+			color: black;
+			position: relative;
+		}
+		.dropdown-content {
+   			display: none;
+    		position: absolute;
+    		background-color:none;
+    		min-width: 160px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 1;
+    		border: none;
+		}
+		.dropdown-content1 {
+   			display: none;
+    		position: absolute;
+    		background-color:none;
+    		min-width: 160px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    		z-index: 1;
+    		border: none;
+		}
+		.dropdown-content a {
+    		color: black;
+    		padding: 12px 16px;
+    		text-decoration: none;
+    		display:block;
+    		background-color: none;
+    		position: relative;
+    		border:none;
+		}
+		.dropdown-content1 a {
+    		color: black;
+    		padding: 12px 16px;
+    		text-decoration: none;
+    		display:block;
+    		background-color: none;
+    		position: relative;
+    		border:none;
+		}
+		.dropdown:hover .dropdown-content {display:block;}
+		.dropbtn {
+    		background-color: none;
+   	 		padding: 16px;
+    		font-size: 16px;
+    	}
+		.dropdown {
+    		position: absolute;
+    		display:block;
+    		margin-top: 40px;
+    		margin-left:280px; 
+    		border: none;
+    		
+		}
+		.dropbtn:hover{
+			border-bottom: 2px solid white;
+		}
+		.dropdown a{
+			background-color: none;
+			color:white;
+			padding-bottom: 2px;
+			margin-top: 30px;
+		}
+		
+
+		input[type=text], input[type=password] {
+    		width: 100%;
+    		padding: 12px 20px;
+    		margin: 8px 0;
+    		display: inline-block;
+    		border: 1px solid #ccc;
+   	 		box-sizing: border-box;
+		}
+		button {
+    		background-color: #4CAF50;
+    		color: white;
+    		padding: 14px 20px;
+    		margin: 8px 0;
+    		border: none;
+    		cursor: pointer;
+    		width: 100%;
+		}
+
+		button:hover {
+    		opacity: 0.8;
+		}
+		.cancelbtn {
+    		width: auto;
+    		padding: 10px 18px;
+    		background-color: #f44336;
+		}
+		.imgcontainer {
+    		text-align: center;
+    		position: relative;
+		}
+
+
+
+		img.avatar {
+    		width: 40%;
+    		border-radius: 50%;
+		}
+		.back{
+			background-color:#fefefe;
+			width: 500px;
+			height:500;
+
+		}
+
+		.container {
+    		padding: 16px;
+		}
+
+		span.psw {
+    		float: right;
+    		padding-top: 16px;
+		}
+		.modal {
+    		display: none; /* Hidden by default */
+   			position: fixed; /* Stay in place */
+    		z-index: 1; /* Sit on top */
+    		left: 0;
+    		top: 0;
+    		width: 100%; /* Full width */
+    		height: 100%; /* Full height */
+    		overflow: auto; /* Enable scroll if needed */
+    		background-color: rgb(0,0,0); /* Fallback color */
+    		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    		padding-top: 60px;
+		}
+
+/* Modal Content/Box */
+		.modal-content {
+    		background-color: #fefefe;
+    		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    		border: 1px solid #888;
+    		width: 80%; /* Could be more or less, depending on screen size */
+		}
+
+/* The Close Button (x) */
+		.close {
+    		position: absolute;
+    		right: 25px;
+    		top: 0;
+    		color: #000;
+    		font-size: 35px;
+    		font-weight: bold;
+		}
+
+		.close:hover,.close:focus {
+    		color: red;
+    		cursor: pointer;
+		}
+
+	}
+	</style>
+</head>
+<body>
+
+	
+	<img src="logo.png" class="logo" width="85">
+	<p style="color: white;position: absolute;display: inline-block;margin-top: 75px;margin-left: 8px;font-size: 23px;">Shangri-La</p>
+	<div class="topnav" >
+		<a style="width: 50px;font-size: 10px;padding-top: 5px;padding-left: 0px;" title="Learn More About cpg">*Shangri-La Preferred Guest</a>
+		<a href="SPG" id="cpg" title="Learn More About cpg">spg</a>
+		<a class="active" href="#home" style="font-family:unset;"onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >SIGN IN OR JOIN</a>
+	</div>
+	<hr><br><br>
+	<div class="menu">
+		<button>RESERVE NOW</button>
+	</div>
+	<div class="dropdown">
+		<a style="margin-right: 40px;margin-top: 0px;" class="dropbtn">DESTINATIONS 
+			<div class="dropdown-content">
+				<a href="#" style="margin-top: 0px;">GRAND</a>
+				<a href="#">CLUB</a>
+			</div>
+		</a>
+	</div>
+	<div class="dropdown" style="width: 250px;margin-left: 450px;margin-top: 40px;">
+		<a style="margin-right: 40px;margin-top: 0px;" class="dropbtn">EXPERIENCE SHANGRI-LA 
+			<div class="dropdown-content">
+				<a href="#" style="margin-top: 0px;">MEETING</a>
+				<a href="#">PARTY</a>
+			</div>
+		</a>
+	</div>
+	<div class="dropdown" style="width: 250px;margin-left: 650px;margin-top: 40px;">
+		<a style="margin-left: 50px;margin-top: 0px;" class="dropbtn">OFFERS
+			<div class="dropdown-content">
+				<a href="#" style="margin-top: 0px;padding-left: 66px;">SHANGRI-LA STORE</a>
+				
+			</div>
+		</a>
+	</div><br><br><br><br><br><br><br>
+<div class="back" style="position: relative;width: 500px;position:absolute; align-self: center;">
+<div class="w3-content w3-section" style="max-width:500px;position: relative;">
+  <img class="mySlides" src="1.jpg" style="width:100%">
+  <img class="mySlides" src="2.jpg" style="width:100%">
+  <img class="mySlides" src="3.jpg" style="width:100%">
+</div>
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+	
+		
